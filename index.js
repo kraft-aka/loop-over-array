@@ -47,16 +47,16 @@ const nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 //array.forEach((item, index)=> console.log(index+1, item));
 
 //every
-const evenItem = (num)=> num%2 == 0
-if(nums.every(evenItem)) {
-  console.log('All items are even.')
+const evenItem = (num) => num % 2 == 0;
+if (nums.every(evenItem)) {
+  console.log("All items are even.");
 } else {
-  console.log('Not all items are even.')
+  console.log("Not all items are even.");
 }
 
-const iterateOverNums = (arr)=> {
-  return arr.every((item,index)=> item % 2 == 0)
-}
+const iterateOverNums = (arr) => {
+  return arr.every((item, index) => item % 2 == 0);
+};
 //console.log(iterateOverNums(nums));
 
 // some()
@@ -85,4 +85,16 @@ const loopWithMap = (arr) => arr.map((item) => item);
 
 const num = (arr) => arr.reduce((total, value, arr) => total + value);
 
-console.log(num(array));
+//console.log(num(array));
+
+// linear search algorithm with for loop
+const linearSearch = (arr, item) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == item) {
+      return `${item} is found:---> ${arr[i]}`;
+    }
+  }
+  return `${item} is not found!`;
+};
+
+console.log(linearSearch(array, "😎"));
